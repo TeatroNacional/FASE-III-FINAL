@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #ffffff;
+    background-size: cover;
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+.navbar-transparent {
+    background-color: transparent !important; /* El !important asegura que esta regla sobrescriba cualquier otra regla */
+}
+
+.nav-link{
+    background-image: linear-gradient(to bottom, #303845,#3C4557, #363D4D);
+    padding: 9px 38px;
+    border-radius: 8px;
+    margin-right: 30px;    font-size: 20px;
+}
+
+#icono{
+    max-width: 100px;
+}
+
+.titulo{
+    background-color: rgb(255, 255, 255,0.8);
+    color: #4375D9;
+}
+
+/*
+sidebar */
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #ffffff; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  .sidenav-link{
+    background-image: linear-gradient(to bottom, #303845,#3C4557, #363D4D);
+    color: #ffffff;
+    border-radius: 8px;   
+}
+.icon{
+    width: 40px;
+}
+
+/** customer section **/
+ 
+.customer {
+  background-color: #ffffff;
+  padding-top: 90px;
+}
+
+.customer .customer_text h2,h3,
+h4,
+p {
+  font-size: 17px;
+  text-align: justify;
+  line-height: 35px;
+  color: #0c0c0b;
+  font-weight: 500;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+/*--imagen 1--*/
+.two_box .many_box_img_1 {
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #303845, #3C4557, #363D4D);
+}
+
+.two_box .many_box_img_1 figure {
+  margin: 0;
+}
+
+.two_box .many_box_img_1 figure img {
+  width: 100%;
+}
+/*--*/
+.two_box .many_box_img {
+  background-image: linear-gradient(to bottom, #303845, #3C4557, #363D4D);
+}
+
+.two_box .many_box_img figure {
+  margin: 0;
+}
+
+.two_box .many_box_img figure img {
+  width: 100%;
+}
+
+.two_box .many_box p {
+  font-size: 17px;
+  line-height: 28px;
+  color: #000000;
+  text-align: justify;
+  font-weight: 500;
+}
+
+/** customer section **/
+
+  /** footer section **/
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.col-xl-6,
+.col-lg-6,
+.col-md-6,
+.col-sm-12 {
+  padding: 0 15px;
+}
+
+.address {
+  margin-bottom: 15px;
+}
+
+.telefono, .correo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Estilos para el logo */
+.logoGabinete {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los íconos de redes sociales */
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bi {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+
+/** end footer section **/
