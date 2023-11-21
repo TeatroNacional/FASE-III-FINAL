@@ -62,7 +62,7 @@ const firebaseConfig = {
 
   // Función para manejar el clic en el botón
 function handleButtonClick(productName) {
-    window.location.href = '../TEATRO_NACIONAL/login.html';
+    window.location.href = './indexuserObra.html';
 }
 
 // Llama a la función para mostrar productos cuando la página se carga completamente
@@ -76,3 +76,5 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  

@@ -92,69 +92,61 @@ sidebar */
     width: 40px;
 }
 
-/** historia section **/
-#content {
-  display: flex;
-  width: 80%; /* Ajusta el ancho total según sea necesario */
-  margin: 0 auto;
+/** customer section **/
+ 
+.customer {
+  background-color: #ffffff;
+  padding-top: 90px;
 }
 
-#custom {
-  flex: 1;
-  padding: 20px; /* Ajusta el espaciado según sea necesario */
-  background-color: #f0f0f0; /* Color de fondo para la sección de la izquierda */
+.customer .customer_text h2,h3,
+h4,
+p {
+  font-size: 17px;
+  text-align: justify;
+  line-height: 35px;
+  color: #0c0c0b;
+  font-weight: 500;
+  background-color: #ffffff;
+  padding: 20px;
 }
 
-#demo {
-  flex: 1;
+/*--imagen 1--*/
+.two_box .many_box_img_1 {
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #303845, #3C4557, #363D4D);
 }
 
-/* Asegura que las imágenes del carrusel ocupen el 100% del ancho de su contenedor */
-.carousel-inner img {
+.two_box .many_box_img_1 figure {
+  margin: 0;
+}
+
+.two_box .many_box_img_1 figure img {
   width: 100%;
-  height: auto ;
+}
+/*--*/
+.two_box .many_box_img {
+  background-image: linear-gradient(to bottom, #303845, #3C4557, #363D4D);
 }
 
+.two_box .many_box_img figure {
+  margin: 0;
+}
 
-/* obras */
+.two_box .many_box_img figure img {
+  width: 100%;
+}
 
-#product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  /* Agrega estilos para cada elemento de producto */
-  
-  #product-container > div {
-    background-color: #ffffff; /* Color de fondo para cada producto */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-  }
-  
-/* Agrega estilos al botón */ 
-button {
-    padding: 10px 15px;
-    background-color: #4caf50; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* Cambia el estilo del cursor al pasar el mouse sobre el botón */ 
-  button:hover {
-    background-color: #4577a0; /* Cambia el color de fondo al pasar el mouse sobre el botón */
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+.two_box .many_box p {
+  font-size: 17px;
+  line-height: 28px;
+  color: #000000;
+  text-align: justify;
+  font-weight: 500;
+}
+
+/** customer section **/
+
   /** footer section **/
 footer {
   background-color: #f8f9fa;
