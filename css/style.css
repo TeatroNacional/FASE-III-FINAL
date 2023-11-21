@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url('../images/IMG-20220202-WA0183.jpg');
+    background-size: cover;
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+.navbar-transparent {
+    background-color: transparent !important; /* El !important asegura que esta regla sobrescriba cualquier otra regla */
+}
+
+.nav-link{
+    background-image: linear-gradient(to bottom, #303845,#3C4557, #363D4D);
+    padding: 9px 38px;
+    border-radius: 8px;
+    margin-right: 30px;    font-size: 20px;
+}
+
+#icono{
+    max-width: 100px;
+}
+
+.titulo{
+    background-color: rgb(255, 255, 255,0.8);
+    color: #4375D9;
+}
+
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Agrega estilos para cada elemento de producto */
+  #product-container > div {
+    background-color: #ffffff; /* Color de fondo para cada producto */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+ 
+/* Agrega estilos al botón */
+button {
+    padding: 10px 15px;
+    background-color: #4caf50; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Cambia el estilo del cursor al pasar el mouse sobre el botón */
+  button:hover {
+    background-color: #4577a0; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro Nacional</title>
+    <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../css/style_login.css">
+    <!-- Responsive-->
+    <!-- fevicon -->
+    <link rel="icon" href="../images/Logo_Gobierno.ico" type="image/gif" />
+</head>
+<!-- body -->
+
+<body >
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-transparent">
+   <div class="container">
+     <a class="navbar-brand" href="/"><img src="../icon/teatro-icono.png" alt="" id="icono"></a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+       <div class="navbar-nav ms-auto">
+           <a class="nav-link" href="../TEATRO_NACIONAL/register.html">Register</a>
+       </div>
+     </div>
+   </div>
+ </nav>
+ <div>
+   <h1 class="titulo"><center>Bienvenido al Teatro Nacional de El Salvador</center></h1>
+  <div id="content_container">
+         <div id="form_container">
+            <div id="form_header_container">
+               <h2 id="form_header"> Login </h2>
+            </div>
+
+            <div id="form_content_container">
+               <div id="form_content_inner_container">
+                  <input type="email" id="email" placeholder="You must enter your email adreess">
+                  <input type="password" id="password" placeholder="You must enter your new password">
+                  <div id="button_container">
+                     <button onclick="login()">Login</button>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<!-- Toastify js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src="../js/login.js"></script>
+
+</html>

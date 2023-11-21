@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro Nacional</title>
+    <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="../css/style_register.css">
+    <!-- Responsive-->
+    <!-- fevicon -->
+    <link rel="icon" href="../images/Logo_Gobierno.ico" type="image/gif" />
+</head>
+<!-- body -->
+
+<body>
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-transparent">
+   <div class="container">
+     <a class="navbar-brand" href="/"><img src="../icon/teatro-icono.png" alt="" id="icono"></a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+       <div class="navbar-nav ms-auto">
+           <a class="nav-link" href="../TEATRO_NACIONAL/login.html">Login</a>
+       </div>
+     </div>
+   </div>
+ </nav>
+ <div>
+   <h1 class="titulo"><center>Bienvenido al Teatro Nacional de El Salvador</center></h1>
+      <div id="content_container">
+         <div id="form_container">
+            <div id="form_header_container">
+               <h2 id="form_header"> Register</h2>
+            </div>
+
+            <div id="form_content_container">
+               <div id="form_content_inner_container">
+                  <input type="text" id="name" placeholder="You must enter your Name">
+                  <input type="text" id="lastname" placeholder="You must enter your lastname">
+                  <input type="email" id="email" placeholder="You must enter your email adreess">
+                  <input type="password" id="password" placeholder="You must enter your new password">
+
+                  <input type="number" id="age" placeholder="you must enter your age" min="0">
+                  <select id="residence_country" name="residence_country">
+                     <option value="" disabled selected hidden>Select your residence country</option>
+                     <option value="Estados Unidos">Estados Unidos</option>
+                     <option value="Canada">Canada</option>
+                     <option value="Mexico">Mexico</option>
+                     <option value="Guatemala">Guatemala</option>
+                     <option value="El Salvador">El Salvador </option>
+                     <option value="Nicaragua">Nicaragua</option>
+                     <!-- Agrega más opciones según sea necesario -->
+                  </select>
+
+                  <div id="button_container">
+                     <button onclick="register()">Register</button>
+                  </div>
+
+               </div>
+            </div>
+            <!--
+                   <div id="form_content_container">
+                       <div id="form_content_inner_container">
+                           <input type="text" id="full_name" placeholder="Full name">
+                           <input type="email" id="email" placeholder="Email">
+                           <input type="password" id="password" placeholder="New Password">
+   
+                           <input type="text" id="favourite_song" placeholder="The Best Song Ever">
+                           <input type="text" id="milk_before_cereal" placeholder="Milk Before Cereal? ( Yes | No )">
+   
+                           <div id="button_container">
+                               <button onclick="login()">Login</button>
+                               <button onclick="register()">Register</button>
+                           </div>
+   
+                       </div>
+                   </div>
+                  -->
+         </div>
+      </div>
+ </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<!-- Toastify js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- Our script must be loaded after firebase references -->
+<script src="../js/register.js"></script>
+
+</html>
