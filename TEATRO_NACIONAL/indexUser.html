@@ -96,15 +96,15 @@
                         class="d-block">
                 </div>
                 <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
-        
+
     </div>
 
 
@@ -113,8 +113,19 @@
     <!-- Agrega esto donde quieras mostrar los productos en teatro.html -->
     <div id="product-container" class="container mt-5">
         <!-- Aquí se mostrarán los productos -->
+        <div class="emballage">
+            <div id="product-container1"></div>
+            <button onclick="handleButtonClick('${product.name}',1)">Agregar al carrito</button>
+        </div>
+        <div class="emballage">
+            <div id="product-container2"></div>
+            <button onclick="handleButtonClick('${product.name}',2)">Agregar al carrito</button>
+        </div>
+        <div class="emballage">
+            <div id="product-container3"></div>
+            <button onclick="handleButtonClick('${product.name}',3)">Agregar al carrito</button>
+        </div>
     </div>
-
     <!--  footer-->
     <footer>
         <div class="footer">

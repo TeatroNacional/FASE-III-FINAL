@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro Nacional</title>
+    <!-- Toastify CSS -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- style css -->
+    <link rel="stylesheet" href="../css/style_pago.css">
+    <!-- Responsive-->
+    <!-- fevicon -->
+    <link rel="icon" href="../images/Logo_Gobierno.ico" type="image/gif" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="../icon/teatro-icono.png" alt="" id="icono"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="../index.html">cerrar Sesion</a>
+                    <button onclick="openNav()" class="sidenav-link"><img src="../images/menu_icon.png" class="icon"
+                            alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="./historia.html">Historia</a>
+        <a href="./indexUserObra.html">Obras</a>
+        <a href="#">Calendario</a>
+    </div>
+    <h1 class="titulo">
+        <center>Bienvenido al Teatro Nacional de El Salvador</center>
+    </h1>
+
+    <div class="emballage">
+        <form id="paymentForm">
+            <div class="row">
+                <div class="col">
+                    <label for="cardNumber">Número de Tarjeta:</label>
+                    <input type="text" id="cardNumber" maxlength="16" placeholder="Ingrese el número de tarjeta" required pattern="\d{16}">
+                </div>
+                <div class="col">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" maxlength="3" placeholder="Ingrese el CVV" required pattern="\d{3}">
+                </div>
+            </div>
+
+            <label for="cardHolder">Nombre del Propietario de la Tarjeta:</label>
+            <input type="text" id="cardHolder" placeholder="Ingrese el nombre" required>
+
+            <div class="row">
+               <label for="expirationMonth">Vencimiento :</label>
+                <div class="col">
+                    <input type="text" id="expirationMonth" maxlength="2" placeholder="MM" required pattern="\d{2}">
+                </div>
+                <div class="col">
+                    <input type="text" id="expirationYear" maxlength="4" placeholder="YYYY" required pattern="\d{4}">
+                </div>
+            </div>
+
+            <button type="button" onclick="validateAndSubmit()">Pagar</button>
+        </form>
+
+        <!-- Modal -->
+        <div id="successModal" style="display: none;">
+            <p>Pago Exitoso</p>
+            <button onclick="redirectToIndex()">Cerrar</button>
+        </div>
+    </div>
+
+  <!--  footer-->
+  <footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                    <div class="address">
+                        <i class="bi bi-geo-alt">
+                            <p>MINISTERIO DE CULTURA
+                                Edificio A-5 Plan Maestro, Centro de Gobierno, Alameda Juan Pablo II y calle
+                                Guadalupe,
+                                San Salvador, El Salvador.</p>
+                        </i>
+                    </div>
+                    <div class="telefono">
+                        <i class="bi bi-telephone"></i>
+                        <p>+503 2501-4400</p>
+                    </div>
+                    <div class="correo">
+                        <i class="bi bi-envelope"></i>
+                        <p>comunicaciones@cultura.gob.sv</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="address">
+                                <img src="../images/Logo_Gobierno.png"
+                                    alt="logo Gabinete del Gobierno de la Republica de El Salvador"
+                                    class="logoGabinete">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="address">
+                                <h3>Únete a nuestra comunidad</h3>
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+</body>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<!-- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Toastify js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="../js/pago.js"></script>
+</body>
+</html>
