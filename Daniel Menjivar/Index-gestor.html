@@ -44,8 +44,84 @@
     <h1 class="titulo">
         <center>Bienvenido al Teatro Nacional de El Salvador</center>
     </h1>
-    <p> <center><button>Añadir</button></center>
+    <br>
+    <center><p><button type="button"class="btn btn-primary btn-add" data-bs-toggle="modal" data-bs-target="#addDataModal">Editar </button></p></center>
     </p>
+    <!-- Add Module Start -->
+<div class="modal fade" id="addDataModal" tabindex="-1" aria-labelledby="addDataModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="form">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addDataModal">Add Product</h1>
+                <button type="button" id="close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Enter Item name"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <small id="name-error-msg" style="color: red;"></small>
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="text" class="form-control" id="price" placeholder="Enter Item Price"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <small id="price-error-msg" style="color: red;"></small>
+                    </div>
+                    <div class="form-group mt-2">
+                        <textarea class="form-control h-25" id="description" placeholder="Enter Item Description"
+                            rows="3"></textarea>
+                            <small id="disc-error-msg" style="color: red;"></small>
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                        <small id="image-error-msg" style="color: red;"></small>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="submit" class="btn submitButton w-100" id="submitdata">Add</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- Edit Module Start -->
+  <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" id="form">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar</h1>
+            <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <div id="image-div"></div>
+              <input type="hidden" class="form-control" id="id-edit" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+            </div>
+            <div class="form-group mt-2">
+              <label for="exampleFormControlSelect1">Name -</label>
+            <input type="text" class="form-control" id="name-edit" placeholder="Enter Product name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="form-group mt-2">
+              <label for="exampleFormControlSelect1">Price -</label>          
+              <input type="text" class="form-control" id="price-edit" placeholder="Enter Product Price" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="form-group mt-2">
+              <label for="exampleFormControlTextarea1">Description -</label>
+              <textarea class="form-control h-25" id="description-edit" placeholder="Enter Description of Product" rows="3"></textarea>
+            </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success w-100" id="update">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Module End -->
+    <br>
 
     <!-- Historia teatro-->
     <div id="content">
@@ -111,7 +187,7 @@
 
 
     <!-- end Historia teatro-->
-
+    
     <!-- Agrega esto donde quieras mostrar los productos en teatro.html -->
     <div id="product-container" class="container mt-5">
         <!-- Aquí se mostrarán los productos -->
