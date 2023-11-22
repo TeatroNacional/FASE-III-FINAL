@@ -74,7 +74,7 @@ function showMessage(message, type = "success") {
                 } else if (userData.role === 'gestor') {
                   // Usuario es gestor
                   showMessage('Welcome manager' + userData.name);
-                  window.location.href='../TEATRO_NACIONAL/indexGestor.html'
+                  window.location.href='../TEATRO_NACIONAL/index-gestor.html'
                 } else {
                   // Usuario es cliente
                   showMessage('Welcome ' + name);

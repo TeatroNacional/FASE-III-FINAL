@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,169 @@
     <!-- fevicon -->
     <link rel="icon" href="../images/Logo_Gobierno.ico" type="image/gif" />
 </head>
+
 <body>
-    <h2>Administrador</h2>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img src="../icon/teatro-icono.png" alt="" id="icono"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="../index.html">cerrar Sesion</a>
+                    <button onclick="openNav()" class="sidenav-link"><img src="../images/menu_icon.png" class="icon"
+                            alt=""></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="./historia.html">Historia</a>
+        <a href="./calendario-admin.html">Calendario</a>
+        <a href="./register_admin_gestor.html">Crear Usuarios</a>
+    </div>
+    <h1 class="titulo">
+        <center>Bienvenido al Teatro Nacional de El Salvador</center>
+    </h1>
+
+    <!-- Historia teatro-->
+    <div id="content">
+        <div id="custom" class="custom">
+            <div class="contenedor">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="customer_text">
+                            <h2>Teatro Nacional de San Salvador</h2>
+                            <p>El Teatro Nacional de San Salvador está ubicado en el centro histórico de la ciudad
+                                capital
+                                de El
+                                Salvador. Su construcción inició el año de 1911 y terminó en 1917. Es uno de los centros
+                                más
+                                importantes para las artes escénicas en este país. <a
+                                    href="Investigacion_Documentaria/Historia.html">TeatroNacional</a></p>
+                            <p>Dirección: MRX5+CRH, San Salvador
+                                <br> Teléfono: 2222 5689
+                                <br> Función: Teatro de ópera
+                                <br> Arquitecto: Daniel Beylard
+                                <br> Estilo arquitectónico: Arquitectura del Modernismo
+                                <br> Inauguración: 1917
+                                <br> Ubicación: San Salvador
+                                <br> Administrador: Secretaría de Cultura
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide contain" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/obras/Ballet-Nacional-de-El-Salvador-eventos-1536x710.jpg" alt="Los Angeles"
+                        class="d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/obras//CALENDARIO_W14-1536x711.jpg" alt="Chicago" class="d-block">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/obras/Generales-MUNA-de-Noche_Calendario_W-1536x709.jpg" alt="New York"
+                        class="d-block">
+                </div>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- end Historia teatro-->
+
+    <!-- Agrega esto donde quieras mostrar los productos en teatro.html -->
+    <div id="product-container" class="container mt-5">
+        <!-- Aquí se mostrarán los productos -->
+        <div class="emballage">
+            <div id="product-container1"></div>
+            <button onclick="handleButtonClick('${product.name}',1)">Agregar al carrito</button>
+        </div>
+        <div class="emballage">
+            <div id="product-container2"></div>
+            <button onclick="handleButtonClick('${product.name}',2)">Agregar al carrito</button>
+        </div>
+        <div class="emballage">
+            <div id="product-container3"></div>
+            <button onclick="handleButtonClick('${product.name}',3)">Agregar al carrito</button>
+        </div>
+    </div>
+    <!--  footer-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                        <div class="address">
+                            <i class="bi bi-geo-alt">
+                                <p>MINISTERIO DE CULTURA
+                                    Edificio A-5 Plan Maestro, Centro de Gobierno, Alameda Juan Pablo II y calle
+                                    Guadalupe,
+                                    San Salvador, El Salvador.</p>
+                            </i>
+                        </div>
+                        <div class="telefono">
+                            <i class="bi bi-telephone"></i>
+                            <p>+503 2501-4400</p>
+                        </div>
+                        <div class="correo">
+                            <i class="bi bi-envelope"></i>
+                            <p>comunicaciones@cultura.gob.sv</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <img src="../images/Logo_Gobierno.png"
+                                        alt="logo Gabinete del Gobierno de la Republica de El Salvador"
+                                        class="logoGabinete">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>Únete a nuestra comunidad</h3>
+                                    <i class="bi bi-facebook"></i>
+                                    <i class="bi bi-instagram"></i>
+                                    <i class="bi bi-twitter"></i>
+                                    <i class="bi bi-youtube"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
 </body>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<!-- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/user.js"></script>
+
 </html>

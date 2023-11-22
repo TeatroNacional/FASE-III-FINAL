@@ -1,77 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRUD Operation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style_register_admin.css">
+    <!-- JavaScript -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
-<head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
-   <title>Teatro Nacional</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <!-- Toastify CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
-   <!-- style css -->
-   <link rel="stylesheet" href="../css/style_register.css">
-   <!-- Responsive-->
-   <link rel="stylesheet" href="../css/responsive_register.css">
-   <!-- fevicon -->
-   <link rel="icon" href="../images/Logo_Gobierno.ico" type="image/gif" />
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
-   <!-- Tweaks for older IEs-->
-   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
-   <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-<!-- body -->
-
-<body class="main-layout">
-   <div class="wrapper">
-      <!-- end loader --
-   
-         <div id="content">
-             header -->
-      <header>
-         <!-- header inner -->
-         <div class="head_top">
-            <div class="header">
-               <div class="container-fluid">
-                  <div class="row">
-                     <div class="col-md-3 logo_section">
-                        <div class="full">
-                           <div class="center-desk">
-                              <div class="logo">
-                                 <a href="../index.html"><img id="icono" src="../icon/teatro-icono.png" alt="#"></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-9">
-                        <div class="right_header_info">
-                           <ul>
-                              <li class="menu_iconb">
-                                 <a href="login.html">Iniciar Sesion</a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+  </head>
+  <body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-transparent">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="../icon/teatro-icono.png" alt="" id="icono"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="../index.html">cerrar Sesion</a>
+                <button onclick="openNav()" class="sidenav-link"><img src="../images/menu_icon.png" class="icon"
+                        alt=""></button>
             </div>
-         </div>
-      </header>
-      <!-- end header inner -->
-      <!-- end header -->
+        </div>
+    </div>
+</nav>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Inicio</a>
+    <a href="./historia.html">Historia</a>
+    <a href="./indexUserObra.html">Obras</a>
+    <a href="./calendario-admin.html">Calendario</a>
+    <a href="./register_admin_gestor.html">Crear Usuarios</a>
+
+</div>
+<h1 class="titulo">
+    <center>Bienvenido al Teatro Nacional de El Salvador</center>
+</h1>
+
       <div id="content_container">
          <div id="form_container">
             <div id="form_header_container">
@@ -109,38 +84,66 @@
 
                </div>
             </div>
-            <!--
-                   <div id="form_content_container">
-                       <div id="form_content_inner_container">
-                           <input type="text" id="full_name" placeholder="Full name">
-                           <input type="email" id="email" placeholder="Email">
-                           <input type="password" id="password" placeholder="New Password">
-   
-                           <input type="text" id="favourite_song" placeholder="The Best Song Ever">
-                           <input type="text" id="milk_before_cereal" placeholder="Milk Before Cereal? ( Yes | No )">
-   
-                           <div id="button_container">
-                               <button onclick="login()">Login</button>
-                               <button onclick="register()">Register</button>
-                           </div>
-   
-                       </div>
-                   </div>
-                  -->
          </div>
       </div>
-   </div>
-</body>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-<!-- Toastify js -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<!-- Our script must be loaded after firebase references -->
-<script src="../js/register_admin_gestor.js"></script>
-
-</html>
+       <!--  footer-->
+       <footer>
+         <div class="footer">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ">
+                         <div class="address">
+                             <i class="bi bi-geo-alt">
+                                 <p>MINISTERIO DE CULTURA
+                                     Edificio A-5 Plan Maestro, Centro de Gobierno, Alameda Juan Pablo II y calle
+                                     Guadalupe,
+                                     San Salvador, El Salvador.</p>
+                             </i>
+                         </div>
+                         <div class="telefono">
+                             <i class="bi bi-telephone"></i>
+                             <p>+503 2501-4400</p>
+                         </div>
+                         <div class="correo">
+                             <i class="bi bi-envelope"></i>
+                             <p>comunicaciones@cultura.gob.sv</p>
+                         </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <div class="row">
+                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                 <div class="address">
+                                     <img src="../images/Logo_Gobierno.png"
+                                         alt="logo Gabinete del Gobierno de la Republica de El Salvador"
+                                         class="logoGabinete">
+                                 </div>
+                             </div>
+                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                 <div class="address">
+                                     <h3>Únete a nuestra comunidad</h3>
+                                     <i class="bi bi-facebook"></i>
+                                     <i class="bi bi-instagram"></i>
+                                     <i class="bi bi-twitter"></i>
+                                     <i class="bi bi-youtube"></i>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <!-- end footer -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+     <script type="module" src="../js/admin_manager.js" defer></script>
+     <script>function openNav() {
+         document.getElementById("mySidenav").style.width = "250px";
+       }
+       
+       function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+       }</script>
+   </body>
+ </html>
+ 
